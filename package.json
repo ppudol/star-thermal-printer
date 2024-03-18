@@ -1,6 +1,6 @@
 {
   "name": "star-thermal-printer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fork of Klemenn1337/node-thermal-printer with more features for Star thermal printers.",
   "main": "node-thermal-printer.js",
   "repository": {
