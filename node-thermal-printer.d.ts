@@ -19,6 +19,13 @@ declare enum BreakLine {
   WORD = 'WORD' // Break by words
 }
 
+declare enum Errors {
+  NONE = 'NONE',
+  PAPER_END = 'PAPER_END',
+  PAPER_NEAR_END = 'PAPER_NEAR_END',
+  CONNECTION_ERROR = 'CONNECTION_ERROR'
+}
+
 declare enum CharacterSet {
   PC437_USA = 'PC437_USA',
   PC850_MULTILINGUAL = 'PC850_MULTILINGUAL',
@@ -98,6 +105,12 @@ declare class ThermalPrinter {
       waitForResponse?: boolean;
     }
   ): Promise<String>;
+
+  /**
+  * Send printing buffer to printer, get printer response
+  * @returns Promise<String>
+  */
+  getResponse(): Promise<String>;
 
   /**
    * Add cut
@@ -296,6 +309,12 @@ declare class ThermalPrinter {
   isPrinterConnected(): Promise<boolean>;
 
   /**
+   * Get errors from printer
+   * @returns Promise<boolean>
+  */
+  getErrors(): Promise<boolean>;
+
+  /**
    * Print QR code
    * @param String QR data
    * @param Object Settings (cellSize, correction, model)
@@ -407,9 +426,11 @@ export {
   ThermalPrinter as printer,
   PrinterTypes as types,
   BreakLine as breakLine,
+  Errors as errors,
   CharacterSet as characterSet,
   ThermalPrinter,
   PrinterTypes,
   BreakLine,
-  CharacterSet
+  CharacterSet,
+  Errors
 };
