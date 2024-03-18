@@ -30,5 +30,13 @@
   },
   "devDependencies": {
     "@types/node": "^10.14.2"
+  },
+  "types": "./node-thermal-printer.d.ts",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
