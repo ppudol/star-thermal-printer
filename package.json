@@ -1,11 +1,11 @@
 {
-  "name": "node-thermal-printer",
-  "version": "4.4.2",
-  "description": "Print on Epson, Star, Tranca, Daruma and Brother thermal printers with Node.js",
+  "name": "star-thermal-printer",
+  "version": "1.0.0",
+  "description": "Fork of Klemenn1337/node-thermal-printer with more features for Star thermal printers.",
   "main": "node-thermal-printer.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Klemen1337/node-thermal-printer"
+    "url": "git+https://github.com/ppudol/star-thermal-printer.git"
   },
   "keywords": [
     "thermal printer",
@@ -16,12 +16,12 @@
     "daruma",
     "tranca"
   ],
-  "author": "Klemen Kastelic <klemen.kast@gmail.com> (http://kastelic.net/)",
+  "author": "Klemen Kastelic <klemen.kast@gmail.com>, Przemyslaw Padol <przemyslaw.padol@outlook.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Klemen1337/node-thermal-printer/issues"
+    "url": "https://github.com/ppudol/star-thermal-printer/issues"
   },
-  "homepage": "https://github.com/Klemen1337/node-thermal-printer",
+  "homepage": "https://github.com/ppudol/star-thermal-printer",
   "dependencies": {
     "iconv-lite": "0.5.0",
     "pngjs": "3.3.3",
