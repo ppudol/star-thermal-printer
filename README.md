@@ -40,3 +40,17 @@ Refer to [Original Readme](https://github.com/Klemen1337/node-thermal-printer/bl
 printer.setTextSize(5,5);         // Set text height (0-5) and width (0-5)
 ```
 
+
+#### Read errors from printer
+```js
+import { Errors } from "star-thermal-printer"
+
+printer.execute({waitForResponse: true})
+  .then((data) => {
+    let errorReadFromPrinter = printer.parseStatusRT(data);
+    console.log(errorReadFromPrinter);      // Error.PAPER_END, Error.PAPER_NEAR_END, Error.NONE
+  })
+  .catch((error) => {
+    console.log('Printing error: ' + error)
+  });
+```
